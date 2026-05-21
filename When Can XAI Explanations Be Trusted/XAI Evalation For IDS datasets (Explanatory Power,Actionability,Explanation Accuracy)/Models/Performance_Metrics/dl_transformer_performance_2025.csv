@@ -1,0 +1,5 @@
+model,dataset,split,accuracy,precision,recall,f1,auc_roc,runtime_train_s,best_epoch,n_params
+Transformer,CIC_IIoT_2025,val,0.971,0.9733,0.9712,0.9716,,2245.2,87,117708
+Transformer,CIC_IIoT_2025,test,0.9712,0.9733,0.9712,0.9718,,2245.2,87,117708
+Transformer,IDS2025_Balanced,val,0.9711,0.9728,0.9689,0.9716,,149.2,15,115063
+Transformer,IDS2025_Balanced,test,0.9689,0.9728,0.9689,0.9695,,149.2,15,115063

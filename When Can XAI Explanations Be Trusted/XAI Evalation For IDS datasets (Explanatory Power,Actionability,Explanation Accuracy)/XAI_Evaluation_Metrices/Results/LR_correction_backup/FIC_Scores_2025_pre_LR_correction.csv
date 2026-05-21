@@ -1,0 +1,13 @@
+model,dataset,global_fic,n_consensus_features,mean_instance_fic,IntegratedGradients_SHAP,IntegratedGradients_LIME,IntegratedGradients_Attention,SHAP_LIME,SHAP_Attention,LIME_Attention,n_aligned,sample_adequacy,n_per_method,SHAP_Anchors,LIME_Anchors,SHAP_IntegratedGradients,LIME_IntegratedGradients,Anchors_LIME,LIME_SHAP,Attention_SHAP,Attention_IntegratedGradients,Anchors_SHAP
+Transformer,CIC_IIoT_2025,0.3526,2,0.2539,0.5531,0.3932,0.3506,0.4502,0.3671,0.0017,200,limited,"{'IntegratedGradients': 1000, 'SHAP': 200, 'LIME': 200, 'Attention': 1000}",,,,,,,,,
+LR,CIC_IIoT_2025,0.4488,4,0.2649,,,,0.7152,,,200,limited,"{'SHAP': 1000, 'LIME': 1000, 'Anchors': 200}",0.3953,0.2359,,,,,,,
+RF,CIC_IIoT_2025,0.5554,8,0.3449,,,,0.6179,,,200,limited,"{'SHAP': 1000, 'LIME': 1000, 'Anchors': 200}",0.7361,0.3121,,,,,,,
+LSTM,CIC_IIoT_2025,0.0607,0,0.0569,,,0.1751,0.2257,0.1522,-0.5707,200,limited,"{'SHAP': 200, 'LIME': 200, 'IntegratedGradients': 500, 'Attention': 1000}",,,0.4056,-0.0236,,,,,
+DT,CIC_IIoT_2025,0.306,4,0.1324,,,,0.3192,,,200,limited,"{'SHAP': 1000, 'Anchors': 200, 'LIME': 1000}",0.5659,,,,0.0327,,,,
+XGB,CIC_IIoT_2025,0.2588,2,0.2025,,,,0.3778,,,30,minimal,"{'SHAP': 1000, 'Anchors': 30, 'LIME': 1000}",0.3332,,,,0.0655,,,,
+RF,IDS2025_Balanced,0.5215,3,0.3333,,,,0.5215,,,1000,full,"{'SHAP': 1000, 'LIME': 1000}",,,,,,,,,
+Transformer,IDS2025_Balanced,0.4263,1,0.1136,,,0.3204,,0.4422,0.1075,50,minimal,"{'LIME': 50, 'SHAP': 50, 'IntegratedGradients': 500, 'Attention': 1000}",,,0.8033,0.3755,,0.509,,,
+LR,IDS2025_Balanced,0.677,7,0.4681,,,,0.677,,,1000,full,"{'SHAP': 1000, 'LIME': 1000}",,,,,,,,,
+LSTM,IDS2025_Balanced,0.2478,2,0.1323,,,,,,0.4338,50,minimal,"{'LIME': 50, 'Attention': 1000, 'SHAP': 50, 'IntegratedGradients': 500}",,,0.7173,0.2316,,0.1747,-0.1295,0.059,
+XGB,IDS2025_Balanced,0.3056,4,0.1963,,,,0.4064,,,30,minimal,"{'Anchors': 30, 'SHAP': 1000, 'LIME': 1000}",,,,,0.2433,,,,0.2671
+DT,IDS2025_Balanced,0.3319,3,0.1785,,,,0.506,,,30,minimal,"{'SHAP': 1000, 'LIME': 1000, 'Anchors': 30}",0.242,0.2477,,,,,,,

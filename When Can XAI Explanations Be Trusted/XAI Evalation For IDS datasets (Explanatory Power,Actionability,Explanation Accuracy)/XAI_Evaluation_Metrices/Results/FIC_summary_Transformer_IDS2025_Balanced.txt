@@ -1,0 +1,26 @@
+FIC Score Summary — Transformer_IDS2025_Balanced
+==================================================
+
+Global FIC (mean pairwise ρ):  0.4263
+Mean instance FIC:             0.1136
+Consensus features (FIC>0.5):  1
+
+Method-pair Spearman ρ:
+  LIME_SHAP: 0.5090
+  LIME_IntegratedGradients: 0.3755
+  LIME_Attention: 0.1075
+  SHAP_IntegratedGradients: 0.8033
+  SHAP_Attention: 0.4422
+  IntegratedGradients_Attention: 0.3204
+
+Top 10 consensus features:
+  min_seg_size_forward: FIC=1.000  (in top-k for 4 methods)
+  source_port: FIC=0.500  (in top-k for 3 methods)
+  bwd_packet_length_min: FIC=0.500  (in top-k for 3 methods)
+  protocol: FIC=0.500  (in top-k for 3 methods)
+  down_up_ratio: FIC=0.500  (in top-k for 3 methods)
+  init_win_bytes_forward: FIC=0.500  (in top-k for 3 methods)
+  min_packet_length: FIC=0.167  (in top-k for 2 methods)
+  destination_port: FIC=0.167  (in top-k for 2 methods)
+  ack_flag_count: FIC=0.167  (in top-k for 2 methods)
+  urg_flag_count: FIC=0.167  (in top-k for 2 methods)

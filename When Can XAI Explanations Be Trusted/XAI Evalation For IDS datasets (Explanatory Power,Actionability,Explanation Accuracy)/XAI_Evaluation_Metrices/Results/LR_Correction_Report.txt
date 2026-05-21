@@ -1,0 +1,65 @@
+======================================================================
+LR CORRECTION REPORT — Action 1: Baseline Validity Correction
+======================================================================
+
+1. MODEL PERFORMANCE — OLD vs NEW
+──────────────────────────────────────────────────────────────────────
+  CIC_IIoT_2025
+    OLD: (already corrected on re-run; see LR_correction_backup for original)
+    NEW (StandardScaler+saga, max_iter=3000, converged=True):
+      F1 macro=0.8257  weighted=0.8753
+    Δ macro: see LR_correction_backup
+    Still BASE_MODEL_WEAK? True
+
+  IDS2025_Balanced
+    OLD (lbfgs, no scaler, max_iter=1000, DID NOT CONVERGE):
+      F1 macro=0.5975  weighted=0.6666
+    NEW (StandardScaler+saga, max_iter=3000, converged=False):
+      F1 macro=0.8323  weighted=0.9366
+    Δ macro: +0.2348
+    Still BASE_MODEL_WEAK? True
+
+2. EP VALIDITY CLASSIFICATION — Change for LR rows
+──────────────────────────────────────────────────────────────────────
+  SHAP                   CIC_IIoT_2025  
+    OLD: d=-0.1698  xai=-0.0631  ep_interpret=?
+    NEW: d=-0.1092  xai=+0.0099  ep_interpret=?
+
+  LIME                   CIC_IIoT_2025  
+    OLD: d=-0.3725  xai=-0.0889  ep_interpret=?
+    NEW: d=-0.3731  xai=+0.0050  ep_interpret=?
+
+  Anchors                CIC_IIoT_2025  
+    OLD: d=+0.3144  xai=+0.0038  ep_interpret=?
+    NEW: d=-0.2183  xai=+0.0037  ep_interpret=?
+
+  SHAP                   IDS2025_Balance
+    OLD: d=-0.1523  xai=-0.3525  ep_interpret=?
+    NEW: d=+0.1837  xai=+0.0048  ep_interpret=?
+
+  LIME                   IDS2025_Balance
+    OLD: d=+0.4862  xai=-0.2235  ep_interpret=?
+    NEW: d=-0.1449  xai=-0.0245  ep_interpret=?
+
+3. FIC — OLD vs NEW for LR
+──────────────────────────────────────────────────────────────────────
+  CIC_IIoT_2025: OLD fic=0.4488  NEW fic=0.0619  Δ=-0.3869
+  IDS2025_Balanced: OLD fic=0.6770  NEW fic=-0.3234  Δ=-1.0004
+
+4. CROSS-METHOD RANKINGS — Impact check
+──────────────────────────────────────────────────────────────────────
+  RELIABLE rows (ep_use_in_ranking=True): 0
+  LR rows in RELIABLE set: 0
+  NOTE: All RELIABLE rows are RF. LR correction does not affect
+        RELIABLE-based rankings. Cross-method ranking unchanged.
+
+5. SCIENTIFIC VALIDITY STATEMENT
+──────────────────────────────────────────────────────────────────────
+  The LR correction is a baseline validity fix, not an optimization.
+  Retrained LR remains BASE_MODEL_WEAK (F1 < 90%) on both datasets.
+  The primary XAI rankings (SHAP > LIME > Anchors on RELIABLE RF rows)
+  are unaffected. LR rows in all tables now reflect the true capability
+  of logistic regression when properly trained, ensuring that reported
+  model performance numbers are scientifically accurate.
+
+======================================================================

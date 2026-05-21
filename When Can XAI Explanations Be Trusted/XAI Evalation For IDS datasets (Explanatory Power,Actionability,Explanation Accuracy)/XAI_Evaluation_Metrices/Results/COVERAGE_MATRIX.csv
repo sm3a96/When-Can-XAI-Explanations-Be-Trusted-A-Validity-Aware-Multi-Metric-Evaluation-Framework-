@@ -1,0 +1,39 @@
+dataset,model,method,ep_interpret,n_aligned,sample_adequacy,cohens_d,ep_use_in_ranking,coverage_cause,coverage_detail
+CIC_IIoT_2025,DT,Anchors,INCONCLUSIVE_NOISE,200,limited,-0.0618,False,CI_ZERO,"CI=[-0.0032,0.0078]"
+CIC_IIoT_2025,DT,LIME,INCONCLUSIVE_NOISE,200,limited,-0.2506,False,CI_ZERO,"CI=[-0.0063,-0.0000]"
+CIC_IIoT_2025,DT,SHAP,INCONCLUSIVE_NOISE,200,limited,-0.063,False,CI_ZERO,"CI=[-0.0042,0.0074]"
+CIC_IIoT_2025,LR,Anchors,BASE_MODEL_WEAK,200,limited,0.3144,False,WEAK_MODEL,LR F1≈68-80%; EP unreliable
+CIC_IIoT_2025,LR,LIME,BASE_MODEL_WEAK,200,limited,-0.3725,False,WEAK_MODEL,LR F1≈68-80%; EP unreliable
+CIC_IIoT_2025,LR,SHAP,BASE_MODEL_WEAK,200,limited,-0.1698,False,WEAK_MODEL,LR F1≈68-80%; EP unreliable
+CIC_IIoT_2025,LSTM,Attention,INCONCLUSIVE_NOISE,200,limited,-0.1026,False,CI_ZERO,"CI=[-0.0083,0.0083]"
+CIC_IIoT_2025,LSTM,IntegratedGradients,RELIABLE,200,limited,0.1594,True,VALID,All validity conditions met
+CIC_IIoT_2025,LSTM,LIME,INCONCLUSIVE_NOISE,200,limited,-0.0006,False,CI_ZERO,"CI=[-0.0026,0.0133]"
+CIC_IIoT_2025,LSTM,SHAP,INCONCLUSIVE_NOISE,200,limited,-0.0714,False,DL_COMPUTE,KernelExplainer O(n²); CI crosses zero at n=200
+CIC_IIoT_2025,RF,Anchors,RELIABLE,200,limited,0.9115,True,VALID,All validity conditions met
+CIC_IIoT_2025,RF,LIME,RELIABLE,200,limited,2.7996,True,VALID,All validity conditions met
+CIC_IIoT_2025,RF,SHAP,RELIABLE,200,limited,3.3367,True,VALID,All validity conditions met
+CIC_IIoT_2025,Transformer,Attention,INCONCLUSIVE_NOISE,200,limited,0.155,False,CI_ZERO,"CI=[-0.0002,0.0219]"
+CIC_IIoT_2025,Transformer,IntegratedGradients,INCONCLUSIVE_NOISE,200,limited,0.0698,False,CI_ZERO,"CI=[-0.0052,0.0151]"
+CIC_IIoT_2025,Transformer,LIME,INCONCLUSIVE_NOISE,200,limited,0.028,False,CI_ZERO,"CI=[-0.0076,0.0132]"
+CIC_IIoT_2025,Transformer,SHAP,INCONCLUSIVE_NOISE,200,limited,0.0585,False,DL_COMPUTE,KernelExplainer O(n²); CI crosses zero at n=200
+CIC_IIoT_2025,XGB,Anchors,INCONCLUSIVE_NOISE,30,minimal,0.6254,False,SMALL_N,n=30 < 100
+CIC_IIoT_2025,XGB,LIME,INCONCLUSIVE_NOISE,30,minimal,-0.3263,False,SMALL_N,n=30 < 100
+CIC_IIoT_2025,XGB,SHAP,INCONCLUSIVE_NOISE,30,minimal,-0.2602,False,SMALL_N,n=30 < 100
+IDS2025_Balanced,DT,Anchors,INCONCLUSIVE_NOISE,30,minimal,0.0,False,SMALL_N,n=30 < 100
+IDS2025_Balanced,DT,LIME,INCONCLUSIVE_NOISE,30,minimal,0.0,False,SMALL_N,n=30 < 100
+IDS2025_Balanced,DT,SHAP,INCONCLUSIVE_NOISE,30,minimal,0.0,False,SMALL_N,n=30 < 100
+IDS2025_Balanced,LR,LIME,BASE_MODEL_WEAK,1000,full,0.4862,False,WEAK_MODEL,LR F1≈68-80%; EP unreliable
+IDS2025_Balanced,LR,SHAP,BASE_MODEL_WEAK,1000,full,-0.1523,False,WEAK_MODEL,LR F1≈68-80%; EP unreliable
+IDS2025_Balanced,LSTM,Attention,INCONCLUSIVE_NOISE,50,minimal,0.3003,False,SMALL_N,n=50 < 100
+IDS2025_Balanced,LSTM,IntegratedGradients,INCONCLUSIVE_NOISE,50,minimal,-0.2005,False,SMALL_N,n=50 < 100
+IDS2025_Balanced,LSTM,LIME,INCONCLUSIVE_NOISE,50,minimal,0.0218,False,SMALL_N,n=50 < 100
+IDS2025_Balanced,LSTM,SHAP,INCONCLUSIVE_NOISE,50,minimal,0.2098,False,DL_COMPUTE,KernelExplainer O(n²); n capped at 50
+IDS2025_Balanced,RF,LIME,RELIABLE,1000,full,0.5068,True,VALID,All validity conditions met
+IDS2025_Balanced,RF,SHAP,RELIABLE,1000,full,0.5546,True,VALID,All validity conditions met
+IDS2025_Balanced,Transformer,Attention,INCONCLUSIVE_NOISE,50,minimal,-0.1445,False,SMALL_N,n=50 < 100
+IDS2025_Balanced,Transformer,IntegratedGradients,INCONCLUSIVE_NOISE,50,minimal,0.0662,False,SMALL_N,n=50 < 100
+IDS2025_Balanced,Transformer,LIME,INCONCLUSIVE_NOISE,50,minimal,-0.4154,False,SMALL_N,n=50 < 100
+IDS2025_Balanced,Transformer,SHAP,INCONCLUSIVE_NOISE,50,minimal,0.221,False,DL_COMPUTE,KernelExplainer O(n²); n capped at 50
+IDS2025_Balanced,XGB,Anchors,INCONCLUSIVE_NOISE,30,minimal,-0.412,False,SMALL_N,n=30 < 100
+IDS2025_Balanced,XGB,LIME,INCONCLUSIVE_NOISE,30,minimal,-0.4945,False,SMALL_N,n=30 < 100
+IDS2025_Balanced,XGB,SHAP,INCONCLUSIVE_NOISE,30,minimal,-0.5036,False,SMALL_N,n=30 < 100

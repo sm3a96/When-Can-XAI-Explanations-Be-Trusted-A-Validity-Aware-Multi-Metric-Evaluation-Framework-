@@ -1,0 +1,6 @@
+spearman_rho,p_value,interpretation,method,model,pair
+-0.1906,0.159322,LOW agreement — domain-specific XAI profiles confirmed,SHAP,RF,CIC_IIoT_2025_vs_IDS2025_Balanced
+-0.1337,0.325924,LOW agreement — domain-specific XAI profiles confirmed,SHAP,XGB,CIC_IIoT_2025_vs_IDS2025_Balanced
+-0.1488,0.273719,LOW agreement — domain-specific XAI profiles confirmed,LIME,RF,CIC_IIoT_2025_vs_IDS2025_Balanced
+0.0003,0.998404,LOW agreement — domain-specific XAI profiles confirmed,LIME,XGB,CIC_IIoT_2025_vs_IDS2025_Balanced
+0.0496,0.716455,LOW agreement — domain-specific XAI profiles confirmed,Anchors,XGB,CIC_IIoT_2025_vs_IDS2025_Balanced

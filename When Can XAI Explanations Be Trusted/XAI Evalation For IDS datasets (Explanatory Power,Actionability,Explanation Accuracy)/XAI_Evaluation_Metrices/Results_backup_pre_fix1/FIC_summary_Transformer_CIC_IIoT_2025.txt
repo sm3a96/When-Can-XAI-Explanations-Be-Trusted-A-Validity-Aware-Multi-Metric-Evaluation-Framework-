@@ -1,0 +1,26 @@
+FIC Score Summary — Transformer_CIC_IIoT_2025
+==================================================
+
+Global FIC (mean pairwise ρ):  0.4131
+Mean instance FIC:             0.2539
+Consensus features (FIC>0.5):  2
+
+Method-pair Spearman ρ:
+  IntegratedGradients_SHAP: 0.5309
+  IntegratedGradients_LIME: 0.4823
+  IntegratedGradients_Attention: 0.3682
+  SHAP_LIME: 0.4502
+  SHAP_Attention: 0.4803
+  LIME_Attention: 0.1665
+
+Top 10 consensus features:
+  network_macs_src_count: FIC=1.000  (in top-k for 4 methods)
+  network_packets_all_count: FIC=1.000  (in top-k for 4 methods)
+  network_packet_size_min: FIC=0.500  (in top-k for 3 methods)
+  network_macs_all: FIC=0.500  (in top-k for 3 methods)
+  network_macs_src: FIC=0.500  (in top-k for 3 methods)
+  network_ports_all_count: FIC=0.167  (in top-k for 2 methods)
+  network_macs_all_count: FIC=0.167  (in top-k for 2 methods)
+  network_packets_dst_count: FIC=0.167  (in top-k for 2 methods)
+  network_header_length_min: FIC=0.167  (in top-k for 2 methods)
+  network_ttl_avg: FIC=0.000  (in top-k for 0 methods)

@@ -1,0 +1,21 @@
+FIC Score Summary — LR_IDS2025_Balanced
+==================================================
+
+Global FIC (mean pairwise ρ):  0.6770
+Mean instance FIC:             0.4681
+Consensus features (FIC>0.5):  7
+
+Method-pair Spearman ρ:
+  SHAP_LIME: 0.6770
+
+Top 10 consensus features:
+  fwd_iat_std: FIC=1.000  (in top-k for 2 methods)
+  bwd_iat_total: FIC=1.000  (in top-k for 2 methods)
+  bwd_iat_max: FIC=1.000  (in top-k for 2 methods)
+  fwd_iat_total: FIC=1.000  (in top-k for 2 methods)
+  idle_max: FIC=1.000  (in top-k for 2 methods)
+  idle_min: FIC=1.000  (in top-k for 2 methods)
+  idle_mean: FIC=1.000  (in top-k for 2 methods)
+  source_port: FIC=0.000  (in top-k for 0 methods)
+  fwd_packet_length_max: FIC=0.000  (in top-k for 0 methods)
+  total_length_of_bwd_packets: FIC=0.000  (in top-k for 0 methods)

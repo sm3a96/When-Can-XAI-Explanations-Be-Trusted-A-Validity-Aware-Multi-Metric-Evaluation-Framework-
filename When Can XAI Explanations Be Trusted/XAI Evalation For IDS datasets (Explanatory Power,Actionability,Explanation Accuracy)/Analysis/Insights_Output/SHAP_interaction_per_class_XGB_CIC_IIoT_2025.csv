@@ -1,0 +1,11 @@
+model,dataset,attack_class,feature_1,feature_2,interaction
+XGB,CIC_IIoT_2025,benign,device_name,network_macs_all,0.06209835782647133
+XGB,CIC_IIoT_2025,benign,network_macs_all,network_macs_src,0.054608047008514404
+XGB,CIC_IIoT_2025,benign,network_header_length_avg,network_packet_size_min,0.05371016636490822
+XGB,CIC_IIoT_2025,benign,network_window_size_min,network_window_size_std_deviation,0.05257665738463402
+XGB,CIC_IIoT_2025,benign,network_tcp_flags_std_deviation,network_ttl_min,0.05175383388996124
+XGB,CIC_IIoT_2025,benign,network_tcp_flags_avg,device_name,0.049971260130405426
+XGB,CIC_IIoT_2025,benign,network_interval_packets,network_macs_all,0.04801863059401512
+XGB,CIC_IIoT_2025,benign,device_name,network_macs_src,0.04723822697997093
+XGB,CIC_IIoT_2025,benign,network_packet_size_min,network_window_size_min,0.04706326499581337
+XGB,CIC_IIoT_2025,benign,network_interval_packets,network_macs_src,0.045541778206825256

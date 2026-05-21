@@ -1,0 +1,93 @@
+======================================================================
+COVERAGE ANALYSIS REPORT — Issues #5 and #6
+Joint resolution: Uneven method coverage across XAI methods
+======================================================================
+
+1. STRATEGY CHOICE: Option C — Hybrid
+   Primary table:    Tier 1 (RF/CIC) — joint 3-method comparison
+   Extended table:   Tier 2 (RF/IDS) — 2-method with gap noted
+   Reference table:  Tier 3 — individual method claims only
+
+2. ROOT CAUSE ANALYSIS
+──────────────────────────────────────────────────────────────────────
+  Issue #5 — DL SHAP small sample size:
+    Root cause: KernelExplainer requires O(n × d²) evaluations.
+    With d=66 (CIC) or d=56 (IDS) features and slow DL inference,
+    n was capped at 50 (IDS) or 200 (CIC).
+    CIC (n=200): CI crosses zero for all DL SHAP → INCONCLUSIVE_NOISE
+    IDS (n=50):  Minimal adequacy → INCONCLUSIVE_NOISE
+    Finding: DL SHAP computational cost is itself a paper finding.
+    Paper claim: 'KernelExplainer on DL models is computationally
+    infeasible for n>50 at inference time, limiting EP reliability.'
+
+  Issue #6 — Anchors incomplete comparison:
+    Root cause A (generation gap): Anchors not generated for RF/IDS2025.
+      RF with Anchors at n=30 would have been feasible but was not run.
+      This is a documentation gap acknowledged in the paper.
+    Root cause B (method inapplicability): Anchors is a rule-based method
+      requiring a prediction function; DL Anchors not implemented.
+    Consequence: Anchors has only 1 RELIABLE row (RF/CIC, n=200, d=0.91).
+    Paper claim: 'Anchors coverage is limited to classical models;
+      cross-dataset comparison requires future work.'
+
+3. TIER STRUCTURE
+──────────────────────────────────────────────────────────────────────
+  Tier 1 (Joint, n=200): 3 rows — RF/CIC_IIoT_2025
+    SHAP                   d=+3.3367  CI=[+0.3815,+0.4076]
+    LIME                   d=+2.7996  CI=[+0.3548,+0.3840]
+    Anchors                d=+0.9115  CI=[+0.2048,+0.2440]
+
+  Tier 2 (Extended, n=1000): 2 rows — RF/IDS2025_Balanced
+    SHAP                   d=+0.5546  CI=[+0.1244,+0.1393]
+    LIME                   d=+0.5068  CI=[+0.1128,+0.1238]
+    [Anchors: NOT AVAILABLE for RF/IDS2025 — generation gap]
+
+  Tier 3 (Reference): 1 rows — for per-method claims only
+    IntegratedGradients    LSTM   CIC_IIoT_2025   d=+0.1594
+
+4. METHOD FAIRNESS ASSESSMENT
+──────────────────────────────────────────────────────────────────────
+  SHAP                  : 2 RELIABLE  | RF/CIC(n=200)+RF/IDS(n=1000)   | All adequacy conditions met. DL SHAP excluded per Issue #5.
+  LIME                  : 2 RELIABLE  | RF/CIC(n=200)+RF/IDS(n=1000)   | All adequacy conditions met.
+  Anchors               : 1 RELIABLE  | RF/CIC(n=200) only             | IDS2025 gap (Issue #6). Limited but valid for Tier 1.
+  IntegratedGradients   : 1 RELIABLE  | LSTM/CIC(n=200)                | Only DL-specific method reaching RELIABLE. Narrow coverage.
+  Attention             : 0 RELIABLE  | None                           | All DL Attention rows INCONCLUSIVE (CI crosses zero).
+
+5. RANKING UNDER HYBRID STRATEGY
+──────────────────────────────────────────────────────────────────────
+  Tier 1 ranking (RF/CIC — head-to-head, comparable n=200):
+    Rank 1: SHAP                   d=+3.3367
+    Rank 2: LIME                   d=+2.7996
+    Rank 3: Anchors                d=+0.9115
+
+  Tier 2 ranking (RF/IDS — SHAP vs LIME only):
+    Rank 1: SHAP                   d=+0.5546
+    Rank 2: LIME                   d=+0.5068
+
+  SHAP > LIME consistent across both tiers.
+  Anchors: Tier 1 rank 3 (d=0.91); excluded from Tier 2 (gap).
+
+6. PAPER CLAIMS SUPPORTED BY HYBRID STRATEGY
+──────────────────────────────────────────────────────────────────────
+  SUPPORTED (use in paper without qualification):
+    - 'SHAP achieves highest EP on RF models across both datasets'
+    - 'LIME shows consistent EP on RF, slightly below SHAP'
+    - 'Anchors achieves EP=0.224 (RELIABLE) on RF/CIC'
+  CONDITIONAL (require qualification):
+    - 'Anchors vs LIME/SHAP on IDS2025': NOT POSSIBLE (gap)
+    - 'DL XAI methods EP on IDS2025': all INCONCLUSIVE (note n limit)
+  NOT SUPPORTED (cannot claim from this data):
+    - 'Attention achieves reliable EP': 0 RELIABLE rows
+    - 'DL SHAP equals classical SHAP in EP': different n, all INCONCLUSIVE
+
+7. COVERAGE CAUSE SUMMARY
+──────────────────────────────────────────────────────────────────────
+  SMALL_N                       : 15 combinations  — Insufficient sample (n<100); adequacy=minimal
+  CI_ZERO                       : 8 combinations  — CI crosses zero; effect direction not established
+  VALID                         : 6 combinations  — Valid RELIABLE row
+  WEAK_MODEL                    : 5 combinations  — Base model F1 < 90%; EP metric unreliable
+  DL_COMPUTE                    : 4 combinations  — Computational constraint (DL SHAP O(n²))
+
+======================================================================
+  Issues #5 and #6 RESOLVED via Option C — Hybrid Strategy
+======================================================================

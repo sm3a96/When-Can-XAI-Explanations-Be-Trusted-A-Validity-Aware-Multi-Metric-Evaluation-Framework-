@@ -1,0 +1,30 @@
+{
+  "dataset": "CIC_IIoT_2025",
+  "input_shape": [
+    383470,
+    69
+  ],
+  "output_shape": [
+    383470,
+    68
+  ],
+  "original_label_count": 937,
+  "consolidated_label_count": 8,
+  "class_distribution": {
+    "benign": 134070,
+    "recon": 85116,
+    "dos": 55442,
+    "ddos": 51561,
+    "mitm": 23287,
+    "malware": 22624,
+    "web": 6944,
+    "bruteforce": 4426
+  },
+  "split_sizes": {
+    "train": 268428,
+    "val": 57521,
+    "test": 57521
+  },
+  "random_seed": 42,
+  "runtime_seconds": 18.5
+}

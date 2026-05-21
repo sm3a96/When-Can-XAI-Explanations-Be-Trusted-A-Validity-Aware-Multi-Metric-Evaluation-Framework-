@@ -1,0 +1,9 @@
+class,count,percent
+benign,134070,34.96
+recon,85116,22.2
+dos,55442,14.46
+ddos,51561,13.45
+mitm,23287,6.07
+malware,22624,5.9
+web,6944,1.81
+bruteforce,4426,1.15

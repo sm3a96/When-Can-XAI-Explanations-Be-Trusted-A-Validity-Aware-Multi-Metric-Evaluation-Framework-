@@ -1,0 +1,3 @@
+model,dataset,split,accuracy,precision,recall,f1,auc_roc,runtime_train_s,best_epoch,n_params
+LSTM,CIC_IIoT_2025,test,0.9656,0.9682,0.9656,0.9664,,563.4,98,135181
+LSTM,IDS2025_Balanced,test,0.9698,0.973,0.9698,0.9702,,166.2,77,135032

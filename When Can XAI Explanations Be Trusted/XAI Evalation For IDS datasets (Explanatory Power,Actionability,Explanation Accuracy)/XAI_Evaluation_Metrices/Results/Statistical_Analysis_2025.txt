@@ -1,0 +1,43 @@
+======================================================================
+STATISTICAL ANALYSIS — XAI Evaluation for IDS (IEEE TIFS 2025)
+======================================================================
+
+Metric: mean_xai_power
+α (nominal): 0.05  |  α (Bonferroni): 0.000403
+N total pre-registered tests: 124
+Cohen's d practical threshold: 0.5
+
+FRIEDMAN TESTS (omnibus):
+  [CIC_IIoT_2025] χ²=5.2, p=0.267385, reject H0=False
+    → No significant difference detected
+  [IDS2025_Balanced] χ²=2.4, p=0.662627, reject H0=False
+    → No significant difference detected
+
+PAIRWISE WILCOXON (Bonferroni corrected):
+
+  Dataset: CIC_IIoT_2025
+    IntegratedGradients vs SHAP: p=0.500000   d=1.172 (PRACTICAL)  winner=IntegratedGradients
+    IntegratedGradients vs LIME: p=0.500000   d=1.175 (PRACTICAL)  winner=IntegratedGradients
+    IntegratedGradients vs Attention: p=1.000000   d=0.692 (PRACTICAL)  winner=IntegratedGradients
+    IntegratedGradients vs Anchors: p=1.000000   d=-0.931 (PRACTICAL)  winner=Anchors
+    SHAP vs LIME: p=0.142213   d=0.054   winner=SHAP
+    SHAP vs Attention: p=0.500000   d=-1.015 (PRACTICAL)  winner=Attention
+    SHAP vs Anchors: p=0.625000   d=0.163   winner=SHAP
+    LIME vs Attention: p=0.500000   d=-1.056 (PRACTICAL)  winner=Attention
+    LIME vs Anchors: p=0.875000   d=0.091   winner=LIME
+    Attention vs Anchors: p=1.000000   d=-0.983 (PRACTICAL)  winner=Anchors
+
+  Dataset: IDS2025_Balanced
+    IntegratedGradients vs SHAP: p=0.500000   d=-1.537 (PRACTICAL)  winner=SHAP
+    IntegratedGradients vs LIME: p=1.000000   d=-0.714 (PRACTICAL)  winner=LIME
+    IntegratedGradients vs Attention: p=1.000000   d=-0.769 (PRACTICAL)  winner=Attention
+    IntegratedGradients vs Anchors: p=1.000000   d=-0.547 (PRACTICAL)  winner=Anchors
+    SHAP vs LIME: p=0.401678   d=-0.048   winner=LIME
+    SHAP vs Attention: p=1.000000   d=1.113 (PRACTICAL)  winner=SHAP
+    SHAP vs Anchors: p=0.500000   d=1.456 (PRACTICAL)  winner=SHAP
+    LIME vs Attention: p=1.000000   d=0.433   winner=LIME
+    LIME vs Anchors: p=1.000000   d=0.638 (PRACTICAL)  winner=LIME
+    Attention vs Anchors: p=1.000000   d=0.589 (PRACTICAL)  winner=Attention
+
+DL vs CLASSICAL (Mann-Whitney):
+  p=0.143222  d=-0.141  winner=Classical

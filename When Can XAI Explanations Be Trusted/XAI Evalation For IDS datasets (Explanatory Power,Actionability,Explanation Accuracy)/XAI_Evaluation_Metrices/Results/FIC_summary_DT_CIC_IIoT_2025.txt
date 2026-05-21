@@ -1,0 +1,23 @@
+FIC Score Summary — DT_CIC_IIoT_2025
+==================================================
+
+Global FIC (mean pairwise ρ):  0.3060
+Mean instance FIC:             0.1324
+Consensus features (FIC>0.5):  4
+
+Method-pair Spearman ρ:
+  SHAP_Anchors: 0.5659
+  SHAP_LIME: 0.3192
+  Anchors_LIME: 0.0327
+
+Top 10 consensus features:
+  network_macs_all: FIC=1.000  (in top-k for 3 methods)
+  network_ports_all_count: FIC=1.000  (in top-k for 3 methods)
+  network_macs_src: FIC=1.000  (in top-k for 3 methods)
+  network_packets_dst_count: FIC=1.000  (in top-k for 3 methods)
+  network_ttl_min: FIC=0.333  (in top-k for 2 methods)
+  network_packet_size_min: FIC=0.333  (in top-k for 2 methods)
+  device_mac: FIC=0.333  (in top-k for 2 methods)
+  network_packets_all_count: FIC=0.333  (in top-k for 2 methods)
+  network_ttl_avg: FIC=0.000  (in top-k for 0 methods)
+  network_tcp_flags_min: FIC=0.000  (in top-k for 0 methods)

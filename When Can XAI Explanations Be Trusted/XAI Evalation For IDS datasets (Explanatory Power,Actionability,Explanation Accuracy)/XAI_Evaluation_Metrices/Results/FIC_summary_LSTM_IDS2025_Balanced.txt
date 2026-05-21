@@ -1,0 +1,26 @@
+FIC Score Summary — LSTM_IDS2025_Balanced
+==================================================
+
+Global FIC (mean pairwise ρ):  0.2478
+Mean instance FIC:             0.1323
+Consensus features (FIC>0.5):  2
+
+Method-pair Spearman ρ:
+  LIME_Attention: 0.4338
+  LIME_SHAP: 0.1747
+  LIME_IntegratedGradients: 0.2316
+  Attention_SHAP: -0.1295
+  Attention_IntegratedGradients: 0.0590
+  SHAP_IntegratedGradients: 0.7173
+
+Top 10 consensus features:
+  protocol: FIC=1.000  (in top-k for 4 methods)
+  min_seg_size_forward: FIC=1.000  (in top-k for 4 methods)
+  total_fwd_packets: FIC=0.500  (in top-k for 3 methods)
+  destination_port: FIC=0.500  (in top-k for 3 methods)
+  down_up_ratio: FIC=0.500  (in top-k for 3 methods)
+  ack_flag_count: FIC=0.167  (in top-k for 2 methods)
+  packet_length_mean: FIC=0.167  (in top-k for 2 methods)
+  source_port: FIC=0.167  (in top-k for 2 methods)
+  active_std: FIC=0.167  (in top-k for 2 methods)
+  fwd_packet_length_min: FIC=0.000  (in top-k for 0 methods)

@@ -1,0 +1,23 @@
+FIC Score Summary — XGB_CIC_IIoT_2025
+==================================================
+
+Global FIC (mean pairwise ρ):  0.2588
+Mean instance FIC:             0.2025
+Consensus features (FIC>0.5):  2
+
+Method-pair Spearman ρ:
+  SHAP_Anchors: 0.3332
+  SHAP_LIME: 0.3778
+  Anchors_LIME: 0.0655
+
+Top 10 consensus features:
+  network_macs_all: FIC=1.000  (in top-k for 3 methods)
+  network_macs_dst_count: FIC=1.000  (in top-k for 3 methods)
+  network_macs_src: FIC=0.333  (in top-k for 2 methods)
+  network_window_size_min: FIC=0.333  (in top-k for 2 methods)
+  device_name: FIC=0.333  (in top-k for 2 methods)
+  network_ttl_max: FIC=0.000  (in top-k for 0 methods)
+  network_tcp_flags_std_deviation: FIC=0.000  (in top-k for 0 methods)
+  network_tcp_flags_min: FIC=0.000  (in top-k for 0 methods)
+  network_tcp_flags_max: FIC=0.000  (in top-k for 0 methods)
+  network_tcp_flags_avg: FIC=0.000  (in top-k for 0 methods)

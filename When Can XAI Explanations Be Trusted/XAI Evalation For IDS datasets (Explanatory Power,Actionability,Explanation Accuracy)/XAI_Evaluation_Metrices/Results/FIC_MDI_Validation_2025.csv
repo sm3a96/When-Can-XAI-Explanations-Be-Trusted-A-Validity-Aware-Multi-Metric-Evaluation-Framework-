@@ -1,0 +1,5 @@
+method,dataset,mdi_rho,n_instances
+SHAP,CIC_IIoT_2025,0.9519,1000
+LIME,CIC_IIoT_2025,0.6448,1000
+SHAP,IDS2025_Balanced,0.9106,1000
+LIME,IDS2025_Balanced,0.4228,1000

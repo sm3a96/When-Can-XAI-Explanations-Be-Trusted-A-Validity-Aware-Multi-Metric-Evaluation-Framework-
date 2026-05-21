@@ -1,0 +1,23 @@
+FIC Score Summary — DT_IDS2025_Balanced
+==================================================
+
+Global FIC (mean pairwise ρ):  0.3319
+Mean instance FIC:             0.1785
+Consensus features (FIC>0.5):  3
+
+Method-pair Spearman ρ:
+  SHAP_LIME: 0.5060
+  SHAP_Anchors: 0.2420
+  LIME_Anchors: 0.2477
+
+Top 10 consensus features:
+  destination_port: FIC=1.000  (in top-k for 3 methods)
+  psh_flag_count: FIC=1.000  (in top-k for 3 methods)
+  act_data_pkt_fwd: FIC=1.000  (in top-k for 3 methods)
+  source_port: FIC=0.333  (in top-k for 2 methods)
+  bwd_iat_min: FIC=0.333  (in top-k for 2 methods)
+  bwd_packetss: FIC=0.333  (in top-k for 2 methods)
+  bwd_packet_length_std: FIC=0.333  (in top-k for 2 methods)
+  average_packet_size: FIC=0.333  (in top-k for 2 methods)
+  init_win_bytes_backward: FIC=0.333  (in top-k for 2 methods)
+  fwd_packet_length_min: FIC=0.000  (in top-k for 0 methods)

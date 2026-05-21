@@ -1,0 +1,26 @@
+FIC Score Summary — LSTM_CIC_IIoT_2025
+==================================================
+
+Global FIC (mean pairwise ρ):  0.0607
+Mean instance FIC:             0.0569
+Consensus features (FIC>0.5):  0
+
+Method-pair Spearman ρ:
+  SHAP_LIME: 0.2257
+  SHAP_IntegratedGradients: 0.4056
+  SHAP_Attention: 0.1522
+  LIME_IntegratedGradients: -0.0236
+  LIME_Attention: -0.5707
+  IntegratedGradients_Attention: 0.1751
+
+Top 10 consensus features:
+  network_macs_src_count: FIC=0.500  (in top-k for 3 methods)
+  network_macs_dst_count: FIC=0.500  (in top-k for 3 methods)
+  network_header_length_avg: FIC=0.167  (in top-k for 2 methods)
+  network_macs_all_count: FIC=0.167  (in top-k for 2 methods)
+  network_tcp_flags_avg: FIC=0.167  (in top-k for 2 methods)
+  network_header_length_min: FIC=0.167  (in top-k for 2 methods)
+  network_packets_dst_count: FIC=0.167  (in top-k for 2 methods)
+  network_ttl_std_deviation: FIC=0.000  (in top-k for 0 methods)
+  network_ttl_max: FIC=0.000  (in top-k for 0 methods)
+  network_ttl_avg: FIC=0.000  (in top-k for 1 methods)

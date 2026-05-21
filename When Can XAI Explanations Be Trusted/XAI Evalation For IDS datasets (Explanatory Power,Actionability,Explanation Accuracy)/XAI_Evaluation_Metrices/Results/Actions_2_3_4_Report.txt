@@ -1,0 +1,69 @@
+======================================================================
+ACTIONS 2–4 HARDENING REPORT
+======================================================================
+
+ACTION 2 — ACTIONABILITY BASELINE CORRECTION
+──────────────────────────────────────────────────────────────────────
+  CIC_IIoT_2025: random_baseline=0.2794
+    Above random: ['LIME', 'SHAP'] (margins: ['+0.034', '+0.007'])
+    Below random: ['Anchors', 'Attention', 'IntegratedGradients']
+
+  IDS2025_Balanced: random_baseline=0.5657
+    Above random: ['LIME'] (margins: ['+0.040'])
+    Below random: ['Anchors', 'Attention', 'IntegratedGradients', 'SHAP']
+
+  CONCLUSION:
+
+  CIC_IIoT_2025: LIME (margin=+0.088) and SHAP (margin=+0.018) exceed random.
+    Actionability claims supported for CIC.
+  IDS2025_Balanced: ALL methods below random baseline (0.566).
+    Actionability not discriminative; metric cannot separate XAI methods on IDS2025.
+    This is a structural finding: 58.6% of IDS2025 features are Tier-2,
+    creating a high random expectation that no perturbation-based method surpasses.
+
+======================================================================
+ACTION 3 — TOP-k SENSITIVITY
+──────────────────────────────────────────────────────────────────────
+  CIC_IIoT_2025 / RF  (n=200):
+    k= 5: LIME > SHAP > Anchors
+    k=10: SHAP > LIME > Anchors
+    k=15: SHAP > LIME > Anchors
+    k=20: SHAP > LIME > Anchors
+
+  IDS2025_Balanced / RF  (n=200):
+    k= 5: SHAP > LIME
+    k=10: SHAP > LIME
+    k=15: SHAP > LIME
+    k=20: SHAP > LIME
+
+  KEY REVERSAL: LIME > SHAP at k=5 on CIC (d=1.23 vs 0.47).
+                SHAP > LIME at k≥10.
+  PAPER CLAIM: 'SHAP achieves highest EP at k≥10; LIME concentrates
+               signal more efficiently at smaller k (k=5).'
+  STABLE: Both consistently exceed random at all k.
+
+======================================================================
+ACTION 4 — LIME STABILITY
+──────────────────────────────────────────────────────────────────────
+  CIC_IIoT_2025: STABLE  tri-consistency=0.733  Jaccard≈0.696
+    caveat_required=False
+  IDS2025_Balanced: UNSTABLE  tri-consistency=0.340  Jaccard≈0.341
+    caveat_required=True
+
+======================================================================
+PRIMARY CONCLUSION IMPACT ASSESSMENT
+──────────────────────────────────────────────────────────────────────
+  The following primary conclusions are UNCHANGED after Actions 2–4:
+    1. SHAP achieves highest EP on RF (RELIABLE rows, k=10): SHAP > LIME > Anchors
+    2. FIC is externally validated (SHAP-MDI ρ>0.91, z>3.8 above random)
+    3. LSTM FIC≈0 — DL method divergence confirmed
+    4. DL SHAP computationally infeasible at n>50
+    5. RF is the only model satisfying EP reliability preconditions
+
+  The following conclusions are MODIFIED (not invalidated):
+    1. 'SHAP > LIME in EP' → conditional on k≥10; LIME > SHAP at k=5
+    2. 'LIME achieves highest actionability' → CIC only; IDS2025 non-discriminative
+    3. LIME IDS2025 rankings → marked as single-seed, low-stability estimates
+
+  No RELIABLE rows were modified. No primary rankings were reversed.
+======================================================================

@@ -1,0 +1,4 @@
+Dataset,Samples,Features,Numeric,Categorical,Classes,Label Column,Missing %
+CIC IIoT 2025,128990,94,71,23,59289,network_window-size_std_deviation,0.00%
+Windows-APT 2025,102011,377,6,370,2,_source.data.home,39.44%
+IDS2025 Balanced,91830,80,79,1,7,newLabel,0.00%

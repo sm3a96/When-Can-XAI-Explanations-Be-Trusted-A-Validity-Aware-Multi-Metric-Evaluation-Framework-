@@ -1,0 +1,3 @@
+dataset,method,model,n_instances_tested,k_top,kernel_width,seeds_tested,tri_seed_consistency,jaccard_42_123,jaccard_42_999,jaccard_123_999,stability_class,caveat_required
+CIC_IIoT_2025,LIME,RF,30,10,6.093,"[42, 123, 999]",0.7333,0.696,0.7097,0.6858,STABLE,False
+IDS2025_Balanced,LIME,RF,30,10,5.612,"[42, 123, 999]",0.34,0.341,0.3012,0.3078,UNSTABLE,True

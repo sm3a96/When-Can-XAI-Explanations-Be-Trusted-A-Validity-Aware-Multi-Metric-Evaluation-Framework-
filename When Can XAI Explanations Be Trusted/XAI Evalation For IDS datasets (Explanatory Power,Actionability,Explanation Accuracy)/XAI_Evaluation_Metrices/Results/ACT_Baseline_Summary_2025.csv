@@ -1,0 +1,11 @@
+dataset,method,mean_actionability,random_baseline,margin_over_random,above_random,discriminative,n_rows
+CIC_IIoT_2025,Anchors,0.1592,0.2794,-0.1202,False,False,4
+CIC_IIoT_2025,Attention,0.2466,0.2794,-0.0328,False,False,2
+CIC_IIoT_2025,IntegratedGradients,0.2592,0.2794,-0.0202,False,False,2
+CIC_IIoT_2025,LIME,0.3131,0.2794,0.0337,True,True,6
+CIC_IIoT_2025,SHAP,0.2861,0.2794,0.0067,True,True,6
+IDS2025_Balanced,Anchors,0.1353,0.5657,-0.4304,False,False,2
+IDS2025_Balanced,Attention,0.4944,0.5657,-0.0713,False,False,2
+IDS2025_Balanced,IntegratedGradients,0.5626,0.5657,-0.0031,False,False,2
+IDS2025_Balanced,LIME,0.6061,0.5657,0.0404,True,True,6
+IDS2025_Balanced,SHAP,0.5215,0.5657,-0.0442,False,False,6
