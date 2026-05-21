@@ -24,7 +24,7 @@ This repository provides the full implementation of a **four-dimensional, validi
 
 ## Framework Overview
 
-![Four-Dimensional XAI Evaluation Framework](Paper/Figures/framework_fig2.png)
+![Four-Dimensional XAI Evaluation Framework](When Can XAI Explanations Be Trusted/XAI Evalation For IDS datasets (Explanatory Power,Actionability,Explanation Accuracy)/Figures/framework_fig2.png)
 
 *The proposed pipeline: raw network traffic feeds six classifiers; five XAI methods generate feature attributions; a validity classification layer screens each configuration before computing four complementary metrics.*
 
