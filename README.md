@@ -110,50 +110,7 @@ Each configuration is classified before reporting any metric:
 | FT-Transformer | Deep Learning | SHAP KernelExplainer, LIME, IG, Attention |
 | BiLSTM | Deep Learning | SHAP KernelExplainer, LIME, IG, Attention |
 
----
 
-## Repository Structure
-
-```
-├── Paper/
-│   ├── main.tex                    # IEEE TIFS manuscript
-│   ├── references.bib              # Bibliography
-│   ├── Cover_Letter.tex            # Submission cover letter
-│   └── Figures/                    # All paper figures (PDF + PNG)
-│
-├── XAI Evalation For IDS datasets/
-│   ├── Models/
-│   │   ├── Classical_ML/           # LR, DT, RF, XGBoost training
-│   │   ├── DeepLearning/           # Transformer, BiLSTM training
-│   │   └── model_definitions.py    # Model architectures
-│   │
-│   ├── XAI_Methods/
-│   │   ├── SHAP.py                 # TreeExplainer / LinearExplainer / KernelExplainer
-│   │   ├── LIME.py                 # Local surrogate with distribution-aware kernel
-│   │   ├── Anchors.py              # Rule-based explanations
-│   │   ├── IntegratedGradients.py  # Captum-based IG with zero-vector baseline
-│   │   ├── AttentionExplanation.py # Soft attention weights
-│   │   ├── Generate_Explanations.py # Unified attribution format
-│   │   └── XAI_Config.py           # NIST tier assignments for both datasets
-│   │
-│   ├── XAI_Evaluation_Metrices/
-│   │   ├── Explanatory_Power_2025.py   # EP: confidence-drop + Cohen's d + bootstrap CI
-│   │   ├── Actionability_2025.py       # ACT: NIST 3-tier taxonomy
-│   │   ├── Explanation_Accuracy_2025.py # EA: distribution-preserving perturbation + D-AUC
-│   │   ├── XAI_Consensus_Score.py      # FIC: pairwise Spearman + external MDI validation
-│   │   ├── Statistical_Tests_2025.py   # Friedman / Wilcoxon tests
-│   │   └── Run_All_Metrics_2025.py     # End-to-end evaluation runner
-│   │
-│   ├── Analysis/
-│   │   ├── SHAP_Interaction_Analysis.py
-│   │   ├── Operational_Feasibility.py
-│   │   └── Run_All_Analysis_2025.py
-│   │
-│   └── IDS_Datasets/               # Dataset loading and preprocessing notebooks
-│
-├── XAI_Evaluation_Metrices/        # Top-level metric scripts (mirror)
-└── XAI_Methods/                    # Top-level XAI scripts (mirror)
-```
 
 ---
 
