@@ -230,14 +230,8 @@ If you use this framework or datasets in your research, please cite:
 
 ---
 
-## License
-
-This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
-
----
-
 ## Contact
 
 - **Ismail Bibers** — ibibers@purdue.edu — Purdue University
-- **Mustafa Abdallah** — abdalla0@purdue.edu — Purdue University Indianapolis
+- **Mustafa Abdallah** — abdalla0@purdue.edu — Purdue University
 - **Issa Khalil** — ikhalil@hbku.edu.qa — Hamad Bin Khalifa University
