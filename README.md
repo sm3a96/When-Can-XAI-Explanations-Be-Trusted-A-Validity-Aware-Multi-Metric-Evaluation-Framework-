@@ -25,10 +25,10 @@ This repository provides the full implementation of a **four-dimensional, validi
 ## Framework Overview
 
 <<<<<<< HEAD
-![Four-Dimensional XAI Evaluation Framework](https://github.com/sm3a96/When-Can-XAI-Explanations-Be-Trusted-A-Validity-Aware-Multi-Metric-Evaluation-Framework-/blob/main/When%20Can%20XAI%20Explanations%20Be%20Trusted/XAI%20Evalation%20For%20IDS%20datasets%20(Explanatory%20Power%2CActionability%2CExplanation%20Accuracy)/Figures/framework_fig2.png)
+![Four-Dimensional XAI Evaluation Framework](https://github.com/sm3a96/When-Can-XAI-Explanations-Be-Trusted-A-Validity-Aware-Multi-Metric-Evaluation-Framework-/blob/main/When%20Can%20XAI%20Explanations%20Be%20Trusted/XAI%20Evalation%20For%20IDS%20datasets%20(Explanatory%20Power%2CActionability%2CExplanation%20Accuracy)/Figures/framework_fig_v3.png)
 
 
-*The proposed pipeline: raw network traffic feeds six classifiers; five XAI methods generate feature attributions; a validity classification layer screens each configuration before computing four complementary metrics.*
+*Two 2025 IDS datasets feed six classifiers; five XAI methods explain their predictions, giving 38 configurations. A validity screen keeps only the Reliable (R) configurations (6 of 38) before the four metrics (EP, ACT, EA, FIC) are reported.*
 
 ---
 
