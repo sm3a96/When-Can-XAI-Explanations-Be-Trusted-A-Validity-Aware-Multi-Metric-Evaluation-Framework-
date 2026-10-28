@@ -1,5 +1,5 @@
 ======================================================================
-STATISTICAL ANALYSIS v2 — XAI Evaluation for IDS (IEEE TIFS 2025)
+STATISTICAL ANALYSIS v2 — XAI Evaluation for IDS
 ======================================================================
 
 METHODOLOGY STATEMENT

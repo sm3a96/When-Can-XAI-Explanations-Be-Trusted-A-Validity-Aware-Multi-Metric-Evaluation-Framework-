@@ -1,11 +1,9 @@
 # When Can XAI Explanations Be Trusted?
-## A Validity-Aware Multi-Metric Evaluation Framework for Network Intrusion Detection Systems
+## A Validity-Aware Multi-Metric Evaluation Framework for Network Intrusion Detection
 
-> **IEEE Transactions on Information Forensics and Security (IEEE TIFS) — Under Review**
-
-[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![Python 3.10](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.4.0-orange.svg)](https://pytorch.org/)
-[![scikit-learn](https://img.shields.io/badge/scikit--learn-1.3-green.svg)](https://scikit-learn.org/)
+[![scikit-learn](https://img.shields.io/badge/scikit--learn-1.5-green.svg)](https://scikit-learn.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 **Authors:** Ismail Bibers¹, Issa Khalil², Mustafa Abdallah¹  
@@ -24,7 +22,6 @@ This repository provides the full implementation of a **four-dimensional, validi
 
 ## Framework Overview
 
-<<<<<<< HEAD
 ![Four-Dimensional XAI Evaluation Framework](https://github.com/sm3a96/When-Can-XAI-Explanations-Be-Trusted-A-Validity-Aware-Multi-Metric-Evaluation-Framework-/blob/main/When%20Can%20XAI%20Explanations%20Be%20Trusted/XAI%20Evalation%20For%20IDS%20datasets%20(Explanatory%20Power%2CActionability%2CExplanation%20Accuracy)/Figures/framework_fig_v3.png)
 
 
@@ -38,7 +35,7 @@ This repository provides the full implementation of a **four-dimensional, validi
 |---|---|---|
 | 1 | **Validity Classification Layer** | 84% of standard evaluation configurations fail at least one reliability precondition |
 | 2 | **Explanatory Power (EP)** | SHAP leads at *k* ≥ 10 (Cohen's *d* = 3.337); LIME leads at *k* = 5 (*d* = 1.199) |
-| 3 | **NIST-Grounded Actionability (ACT)** | First application of NIST SP 800-94 to XAI evaluation for IDS |
+| 3 | **NIST-Grounded Actionability (ACT)** | Features tiered by NIST SP 800-94 and mapped to Snort/Suricata rule parameters; LIME is the only method above the random baseline on both datasets |
 | 4 | **Feature Importance Consensus (FIC)** | RF achieves validated consensus (FIC = 0.52–0.56, *ρ* > 0.91 vs MDI); BiLSTM shows near-zero consensus (FIC = 0.061) |
 | 5 | **SHAP Interaction Analysis** | Identifies compound attack signatures invisible to single-feature methods |
 | 6 | **Computational Feasibility** | DL-SHAP requires 18–30 s/sample (infeasible); TreeSHAP ≤ 0.036 s and IG ≤ 0.001 s are real-time viable |
@@ -59,8 +56,8 @@ Measures whether attributed features translate into **operationally deployable S
 ### 3. Explanation Accuracy (EA)
 Evaluates prediction-flip faithfulness using **distribution-preserving perturbation** — features are replaced by values sampled from their real marginal distributions (KS-validated, 97.6% pass rate) — and Deletion-AUC via the trapezoidal rule.
 
-### 4. Feature Importance Consensus (FIC) *(Novel)*
-A novel metric computing the **mean pairwise Spearman rank correlation** across XAI attribution vectors. Externally validated against RF Mean Decrease Impurity (*ρ* > 0.91, *z* > 3.8 above random).
+### 4. Feature Importance Consensus (FIC)
+Measures the disagreement problem (Krishna et al., 2022) on IDS data as the **mean pairwise Spearman rank correlation** across XAI attribution vectors. Externally validated against RF Mean Decrease Impurity (*ρ* > 0.91, *z* > 3.8 above random).
 
 ---
 
@@ -120,8 +117,8 @@ Each configuration is classified before reporting any metric:
 
 ```bash
 # Clone the repository
-git clone https://github.com/PUT-YOUR-LINK-HERE
-cd "XAI_Evaluation (Exp_Pow_Action_ExpAcc) IEEE TIFS"
+git clone https://github.com/sm3a96/When-Can-XAI-Explanations-Be-Trusted-A-Validity-Aware-Multi-Metric-Evaluation-Framework-.git
+cd When-Can-XAI-Explanations-Be-Trusted-A-Validity-Aware-Multi-Metric-Evaluation-Framework-
 
 # Create a virtual environment
 python -m venv venv
@@ -131,21 +128,29 @@ source venv/bin/activate   # Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-**Key dependencies:**
+**Key dependencies** (the versions used for the paper; full list in `requirements.txt`):
 ```
-torch==2.4.0+cu124
-scikit-learn>=1.3
-shap>=0.43
-lime>=0.2
-captum>=0.7
-scipy>=1.11
-pandas>=2.0
-numpy>=1.24
+torch==2.4.0
+scikit-learn==1.5.2
+xgboost==2.1.4
+shap==0.46.0
+lime==0.2.0.1
+anchor-exp==0.0.2.0
+captum==0.9.0
+numpy==1.26.4
+pandas==2.2.3
+scipy==1.11.4
 ```
 
 ---
 
 ## Quick Start
+
+Run from the code folder so the imports resolve:
+
+```bash
+cd "When Can XAI Explanations Be Trusted/XAI Evalation For IDS datasets (Explanatory Power,Actionability,Explanation Accuracy)"
+```
 
 ```python
 from XAI_Evaluation_Metrices.Explanatory_Power_2025 import ExplanatoryPowerEvaluator2025
@@ -184,19 +189,21 @@ print(f"Global FIC: {fic_results['global_fic']:.3f}")
 ## Reproducing Paper Results
 
 ```bash
+cd "When Can XAI Explanations Be Trusted/XAI Evalation For IDS datasets (Explanatory Power,Actionability,Explanation Accuracy)"
+
 # Step 1: Train all six classifiers on both datasets
-python "XAI Evalation For IDS datasets/Models/Classical_ML/Phase_1_Training_ClassicalML_2025.py"
-python "XAI Evalation For IDS datasets/Models/DeepLearning/Phase_1_Training_Transformer_2025.py"
-python "XAI Evalation For IDS datasets/Models/DeepLearning/Phase_1_Training_LSTM_2025.py"
+python Models/Classical_ML/Phase_1_Training_ClassicalML_2025.py
+python Models/DeepLearning/Phase_1_Training_Transformer_2025.py
+python Models/DeepLearning/Phase_1_Training_LSTM_2025.py
 
 # Step 2: Generate all XAI explanations
-python "XAI Evalation For IDS datasets/XAI_Methods/Generate_Explanations.py"
+python XAI_Methods/Generate_Explanations.py
 
 # Step 3: Run all four evaluation metrics
-python "XAI Evalation For IDS datasets/XAI_Evaluation_Metrices/Run_All_Metrics_2025.py"
+python XAI_Evaluation_Metrices/Run_All_Metrics_2025.py
 
 # Step 4: Run analysis and generate paper figures
-python "XAI Evalation For IDS datasets/Analysis/Run_All_Analysis_2025.py"
+python Analysis/Run_All_Analysis_2025.py
 ```
 
 ---
@@ -217,14 +224,13 @@ Classical ML models (scikit-learn) were trained on CPU. Deep learning models req
 If you use this framework or datasets in your research, please cite:
 
 ```bibtex
-@article{bibers2025xai,
-  author    = {Bibers, Ismail and Khalil, Issa and Abdallah, Mustafa},
-  title     = {When Can {XAI} Explanations Be Trusted? A Validity-Aware
-               Multi-Metric Evaluation Framework for Network Intrusion
-               Detection Systems},
-  journal   = {IEEE Transactions on Information Forensics and Security},
-  year      = {2025},
-  note      = {Under review}
+@misc{bibers2026xai,
+  author       = {Bibers, Ismail and Khalil, Issa and Abdallah, Mustafa},
+  title        = {When Can Explainable Artificial Intelligence Explanations Be Trusted?
+                  A Validity-Aware Multi-Metric Evaluation Framework for Network
+                  Intrusion Detection},
+  year         = {2026},
+  howpublished = {\url{https://github.com/sm3a96/When-Can-XAI-Explanations-Be-Trusted-A-Validity-Aware-Multi-Metric-Evaluation-Framework-}}
 }
 ```
 

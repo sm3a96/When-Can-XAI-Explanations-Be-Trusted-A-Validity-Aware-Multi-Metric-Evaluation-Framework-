@@ -1,9 +1,9 @@
 """
 Explanatory_Power_2025.py — Upgraded Explanatory Power Metric
 =============================================================
-Fixes all Reviewer 2 criticisms of the original metric:
+Changes from the original metric:
 
-  OLD (rejected): R² alone → tautology for SHAP (R²=1.0 by construction)
+  OLD: R² alone → tautology for SHAP (R²=1.0 by construction)
   NEW: Multi-metric evaluation with:
     1. 5-fold stratified cross-validation (stability)
     2. 95% bootstrap confidence intervals

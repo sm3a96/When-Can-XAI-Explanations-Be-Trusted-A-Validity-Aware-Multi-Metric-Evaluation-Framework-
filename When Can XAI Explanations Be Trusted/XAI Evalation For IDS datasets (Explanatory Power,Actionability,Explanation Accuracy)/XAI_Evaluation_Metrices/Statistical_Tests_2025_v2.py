@@ -230,7 +230,7 @@ def format_report(all_comparisons: list, metric_tables: pd.DataFrame) -> str:
 
     lines += [
         w,
-        "STATISTICAL ANALYSIS v2 — XAI Evaluation for IDS (IEEE TIFS 2025)",
+        "STATISTICAL ANALYSIS v2 — XAI Evaluation for IDS",
         w,
         "",
         "METHODOLOGY STATEMENT",

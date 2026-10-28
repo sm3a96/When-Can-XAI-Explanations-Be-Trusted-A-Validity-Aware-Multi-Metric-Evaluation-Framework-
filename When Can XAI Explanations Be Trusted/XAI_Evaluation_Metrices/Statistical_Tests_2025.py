@@ -303,7 +303,7 @@ def run_all_tests(
         os.makedirs(os.path.dirname(output_path) or ".", exist_ok=True)
         with open(output_path, "w") as f:
             f.write("=" * 70 + "\n")
-            f.write("STATISTICAL ANALYSIS — XAI Evaluation for IDS (IEEE TIFS 2025)\n")
+            f.write("STATISTICAL ANALYSIS — XAI Evaluation for IDS\n")
             f.write("=" * 70 + "\n\n")
             f.write(f"Metric: {metric_col}\n")
             f.write(f"α (nominal): {ALPHA}  |  α (Bonferroni): {ALPHA_BONFERRONI:.6f}\n")

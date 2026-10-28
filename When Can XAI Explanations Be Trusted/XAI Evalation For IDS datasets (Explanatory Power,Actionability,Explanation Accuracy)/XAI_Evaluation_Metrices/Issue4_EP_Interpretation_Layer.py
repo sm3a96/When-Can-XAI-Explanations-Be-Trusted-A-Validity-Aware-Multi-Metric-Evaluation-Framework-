@@ -20,7 +20,6 @@ ep_use_in_ranking = True iff:
   ep_interpret == "RELIABLE" AND n_aligned >= 100 AND CI does not cross zero
 
 References:
-  TDSC-to-TIFS rewrite, Issue #4
   Logged threshold: F1 ≥ 90% for perturbation-based metrics (Samek et al. 2017)
 """
 

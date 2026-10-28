@@ -14,7 +14,7 @@ Intuition (for paper):
    provides stronger evidence for SOC action than a feature flagged
    by only one method. High consensus = high trustworthiness."
 
-Addresses reviewer criticism:
+Design notes:
   - R3: "Limited insights beyond SHAP > LIME" → FIC reveals which
     features are universally agreed upon vs. method-specific artifacts
 

@@ -13,7 +13,7 @@ Output:
                           of which features appear in the anchor rule
   - explain_rules()     → list of human-readable rule dicts (for paper Table)
 
-Addresses reviewer criticism:
+Design notes:
   - "Only SHAP and LIME" (R1, R2, R3) — Anchors gives rule-based explanations
     (fundamentally different: not attribution scores but decision rules)
   - Most actionable for SOC teams: rules map directly to IDS signatures

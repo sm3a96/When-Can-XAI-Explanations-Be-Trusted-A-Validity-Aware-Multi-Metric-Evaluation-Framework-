@@ -26,7 +26,7 @@ import shap
 class SHAPExplainer:
     """
     Unified SHAP wrapper for classical ML and DL models.
-    Addresses Reviewer 2 criticism: consistent multi-class handling,
+    Design notes: consistent multi-class handling,
     no arbitrary class selection, validated output format.
     """
 

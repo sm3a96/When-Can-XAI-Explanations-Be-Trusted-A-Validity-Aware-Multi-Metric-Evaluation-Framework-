@@ -11,7 +11,7 @@ Configuration (from XAI_Config):
 
 Output format: np.ndarray (n_samples, n_features) — identical to SHAP/LIME
 
-Addresses reviewer criticism:
+Design notes:
   - "Only SHAP and LIME — no SOTA methods" (R1, R2, R3)
   - Provides gradient-based explanations (fundamentally different from
     feature-permutation methods, complementary for FIC score)

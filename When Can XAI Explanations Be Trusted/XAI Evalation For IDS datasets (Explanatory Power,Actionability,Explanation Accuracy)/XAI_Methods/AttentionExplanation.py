@@ -15,7 +15,7 @@ Key advantage over SHAP/LIME:
 
 Output: np.ndarray (n_samples, n_features) — same format as SHAP/LIME
 
-Addresses reviewer: "No DL-specific XAI methods" (R1, R3)
+Adds a deep-learning-specific explanation method.
 Used in:
   - Phase 3.4: FIC Score (consensus with SHAP/LIME/IG)
   - Phase 4.2: DL vs Classical interpretability comparison

@@ -17,7 +17,7 @@ Label mapping (attack family extracted from granular label string):
 Random seed: 42 (all splits)
 Split: 70% train / 15% val / 15% test (stratified)
 
-Documented for: Section 3 (Datasets) of IEEE TIFS paper
+Documented for: Section 3 (Datasets) of the paper
 """
 
 import os, json, time

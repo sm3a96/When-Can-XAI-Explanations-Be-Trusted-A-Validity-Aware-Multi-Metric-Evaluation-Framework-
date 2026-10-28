@@ -12,7 +12,7 @@ NEW approach:
   - Strategy 3: Causal-inspired (preserve feature correlations)
 
   REMOVED from old code:
-  - 'mean' strategy   → creates unrealistic samples (reviewers were right)
+  - 'mean' strategy   → creates unrealistic samples
   - 'median' strategy → same issue
   - 'zero' strategy   → completely unrealistic for network traffic
 
@@ -150,7 +150,7 @@ class ExplanationAccuracyEvaluator2025:
     """
     Upgraded explanation accuracy using distribution-preserving perturbation.
 
-    Removes mean/median strategies (creates unrealistic traffic — reviewer criticism).
+    Removes mean/median strategies (creates unrealistic traffic).
     Adds KS validation, Deletion-AUC, Spearman ρ.
     """
 

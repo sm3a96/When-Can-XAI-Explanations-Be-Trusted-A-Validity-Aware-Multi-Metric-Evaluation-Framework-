@@ -66,7 +66,7 @@ def generate_master_comparison_plot():
     acc = pd.read_csv(acc_path)
 
     fig, axes = plt.subplots(2, 2, figsize=(16, 12))
-    fig.suptitle("XAI Evaluation Results — IEEE TIFS 2025\n"
+    fig.suptitle("XAI Evaluation Results\n"
                  "CIC IIoT 2025 + IDS2025 Balanced Datasets",
                  fontsize=14, fontweight="bold")
 

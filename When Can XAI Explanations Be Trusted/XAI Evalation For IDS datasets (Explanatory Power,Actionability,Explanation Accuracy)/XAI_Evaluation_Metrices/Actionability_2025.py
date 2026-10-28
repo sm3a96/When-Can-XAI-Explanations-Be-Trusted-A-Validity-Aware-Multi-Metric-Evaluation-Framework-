@@ -1,7 +1,7 @@
 """
 Actionability_2025.py — NIST-Grounded 3-Tier Actionability Metric
 ==================================================================
-Replaces the original flat keyword-matching approach that reviewers criticized
+Replaces the original flat keyword-matching approach
 as "arbitrary" (R1, R3, R4).
 
 NEW approach — grounded in:
@@ -37,7 +37,7 @@ class ActionabilityEvaluator2025:
     """
     3-Tier NIST-grounded actionability metric.
 
-    Addresses all previous reviewer criticisms:
+    Design notes:
     - No keyword matching (tier classification from NIST SP 800-94)
     - Quantitative scoring with tier weights (T1=1.0, T2=0.6, T3=0.0)
     - Attack-class-specific breakdown (new finding: IoT vs balanced differ)

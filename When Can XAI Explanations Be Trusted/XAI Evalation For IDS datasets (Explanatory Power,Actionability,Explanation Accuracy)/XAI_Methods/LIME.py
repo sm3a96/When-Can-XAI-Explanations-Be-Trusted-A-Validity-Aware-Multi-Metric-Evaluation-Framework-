@@ -8,7 +8,7 @@ Class-based implementation supporting:
   - Consistent output format matching SHAP: np.ndarray (n_samples, n_features)
   - Operational timing for feasibility analysis
 
-Addresses reviewer criticism:
+Design notes:
   - No arbitrary class selection (uses predicted class)
   - Consistent feature ordering across instances
   - num_samples=5000 (sufficient local approximation)
