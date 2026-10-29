@@ -6,9 +6,6 @@
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-1.5-green.svg)](https://scikit-learn.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-**Authors:** Ismail Bibers¹, Issa Khalil², Mustafa Abdallah¹  
-¹ Purdue University, West Lafayette / Indianapolis, IN, USA  
-² Hamad Bin Khalifa University, Doha, Qatar
 
 ---
 
@@ -223,21 +220,8 @@ Classical ML models (scikit-learn) were trained on CPU. Deep learning models req
 
 If you use this framework or datasets in your research, please cite:
 
-```bibtex
-@misc{bibers2026xai,
-  author       = {Bibers, Ismail and Khalil, Issa and Abdallah, Mustafa},
-  title        = {When Can Explainable Artificial Intelligence Explanations Be Trusted?
-                  A Validity-Aware Multi-Metric Evaluation Framework for Network
-                  Intrusion Detection},
-  year         = {2026},
-  howpublished = {\url{https://github.com/sm3a96/When-Can-XAI-Explanations-Be-Trusted-A-Validity-Aware-Multi-Metric-Evaluation-Framework-}}
-}
-```
+
 
 ---
 
-## Contact
 
-- **Ismail Bibers** — ibibers@purdue.edu — Purdue University
-- **Mustafa Abdallah** — abdalla0@purdue.edu — Purdue University
-- **Issa Khalil** — ikhalil@hbku.edu.qa — Hamad Bin Khalifa University
